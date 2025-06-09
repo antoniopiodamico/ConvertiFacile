@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>ConvertiFacile</title>
+</head>
+<body>
+  <h1>ConvertiFacile</h1>
+
+  <form method="post">
+    <input type="number" step="any" name="valore" placeholder="Valore" required>
+    <select name="tipo">
+      <option value="CtoF">°C → °F</option>
+      <option value="FtoC">°F → °C</option>
+      <option value="mToKm">m → km</option>
+      <option value="kmToM">km → m</option>
+    </select>
+    <button type="submit">Converti</button>
+  </form>
+
+  {% if risultato is not none %}
+    <h2>Risultato: {{ risultato }}</h2>
+  {% endif %}
+</body>
+</html>
